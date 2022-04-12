@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MyApp</string>
+    <string name="star_img">star</string>
+    <string name="restorants_text">Рестораны</string>
+    <string name="glavnoe_text">Главное</string>
+    <string name="kocher_text">Кошер</string>
 </resources>
