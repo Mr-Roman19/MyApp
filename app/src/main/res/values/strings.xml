@@ -4,4 +4,6 @@
     <string name="restorants_text">Рестораны</string>
     <string name="glavnoe_text">Главное</string>
     <string name="kocher_text">Кошер</string>
+    <string name="logo_text1">I</string>
+    <string name="logo_text2">Kosher</string>
 </resources>
