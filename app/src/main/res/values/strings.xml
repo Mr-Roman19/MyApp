@@ -6,4 +6,6 @@
     <string name="kocher_text">Кошер</string>
     <string name="logo_text1">I</string>
     <string name="logo_text2">Kosher</string>
+    <string name="course_start_data">Время</string>
+    <string name="course_lvl">Уровень</string>
 </resources>
