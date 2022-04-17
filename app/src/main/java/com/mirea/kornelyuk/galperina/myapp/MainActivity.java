@@ -38,11 +38,11 @@ public class MainActivity extends AppCompatActivity {
 
         List<Course> courseList = new ArrayList<>();
         courseList.add(new Course(1, "tramezzino", "Бургеры",  "Новичок", "25 минут","#F0F8C1"));
-        courseList.add(new Course(2, "chickenplate", "Курица-ляв\naнги",  "Средний","1,5 часа" ,"#F0F8C1"));
+        courseList.add(new Course(2, "thank_2", "Курица-ляв\naнги",  "Средний","1,5 часа" ,"#F0F8C1"));
         courseList.add(new Course(3, "tramezzino", "Гефильте Фиш",  "Продвинутый","3 часа", "#F0F8C1" ));
         courseList.add(new Course(4,"mincemeat_pie", "Йеменский куриный суп",  "Средний","2,5 часа", "#F0F8C1"));
         //courseList.add(new Course(5, "salad", "Салат «Табуле»\n с петрушкой",  "Средний","25 минут", "#F0F8C1" ));
-        //courseList.add(new Course(6, "bake", "Кугл с яблоками,\n изюмом и корицей",  "Средний", "1,5 часа","#F0F8C1" ));
+        courseList.add(new Course(6, "mincemeat_pie", "Кугл с яблоками,\n изюмом и корицей",  "Средний", "1,5 часа","#F0F8C1" ));
         //courseList.add(new Course(7, "pie", "Нежная творожная запеканка", "Средний","1,5 часа", "#F0F8C1" ));
 
         setCourseRecycler(courseList);
