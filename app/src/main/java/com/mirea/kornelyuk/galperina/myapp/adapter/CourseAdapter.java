@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.mirea.kornelyuk.galperina.myapp.R;
@@ -36,7 +37,7 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseView
 
     @Override
     public void onBindViewHolder(@NonNull CourseViewHolder holder, int position) {
-        holder.courseBg.setBackgroundColor(Color.parseColor(courses.get(position).getColour())); //цвет фона
+        holder.courseBg.setCardBackgroundColor(Color.parseColor(courses.get(position).getColour())); //цвет фона
         int imageId = context.getResources().getIdentifier("ic_" + courses.get(position).getImg(), "drawable", context.getPackageName()); //получаем картинку из строки в id
         holder.courseImage.setImageResource(imageId); //изображение
         holder.courseTitle.setText(courses.get(position).getTitle());
@@ -52,7 +53,7 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseView
     }
 
     public  static final class CourseViewHolder extends RecyclerView.ViewHolder{
-        LinearLayout courseBg;
+        CardView courseBg;
         ImageView courseImage;
         TextView courseTitle, courseLvl, courseData;
 
