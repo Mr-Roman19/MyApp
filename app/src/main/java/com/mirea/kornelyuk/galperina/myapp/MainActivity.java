@@ -27,23 +27,21 @@ public class MainActivity extends AppCompatActivity {
         List<Category> categoryList = new ArrayList<>();
         categoryList.add(new Category(1, "Мясо"));
         categoryList.add(new Category(2, "Птица"));
-        categoryList.add(new Category(3, "Рыба"));
-        categoryList.add(new Category(4,"Супы"));
-        categoryList.add(new Category(5, "Салаты"));
-        categoryList.add(new Category(6, "Десерты"));
-        categoryList.add(new Category(7, "Выпечка"));
+        categoryList.add(new Category(3,"Супы"));
+        categoryList.add(new Category(4, "Салаты"));
+        categoryList.add(new Category(5, "Десерты"));
+        categoryList.add(new Category(6, "Выпечка"));
 
         setCategoryRecycler(categoryList);
 
 
         List<Course> courseList = new ArrayList<>();
-        courseList.add(new Course(1, "tramezzino", "Бургеры",  "Новичок", "25 минут","#F0F8C1"));
-        courseList.add(new Course(2, "thank_2", "Курица-ляв\naнги",  "Средний","1,5 часа" ,"#F0F8C1"));
-        courseList.add(new Course(3, "tramezzino", "Гефильте Фиш",  "Продвинутый","3 часа", "#F0F8C1" ));
-        courseList.add(new Course(4,"mincemeat_pie", "Йеменский куриный суп",  "Средний","2,5 часа", "#F0F8C1"));
-        //courseList.add(new Course(5, "salad", "Салат «Табуле»\n с петрушкой",  "Средний","25 минут", "#F0F8C1" ));
-        courseList.add(new Course(6, "mincemeat_pie", "Кугл с яблоками,\n изюмом и корицей",  "Средний", "1,5 часа","#F0F8C1" ));
-        //courseList.add(new Course(7, "pie", "Нежная творожная запеканка", "Средний","1,5 часа", "#F0F8C1" ));
+        courseList.add(new Course(1, "tramezzino", "Бургеры",  "Новичок", "25 минут","#F0F8C1", "Test"));
+        courseList.add(new Course(2, "thank_2", "Курица-ляв\naнги",  "Средний","1,5 часа" ,"#F0F8C1", "Test"));
+        courseList.add(new Course(3,"food_meat_gumbo", "Йеменский \nкуриный суп",  "Средний","2,5 часа", "#F0F8C1", "Test"));
+        courseList.add(new Course(4, "food_big_salad", "Салат «Табуле»\n с петрушкой",  "Средний","25 минут", "#F0F8C1", "Test" ));
+        courseList.add(new Course(5, "flambyxvi", "Еврейский яблочный пирог",  "Средний", "1,5 часа","#F0F8C1", "Test" ));
+        courseList.add(new Course(6, "mincemeat_pie", "Нежная творожная запеканка", "Средний","1,5 часа", "#F0F8C1", "Test" ));
 
         setCourseRecycler(courseList);
     }

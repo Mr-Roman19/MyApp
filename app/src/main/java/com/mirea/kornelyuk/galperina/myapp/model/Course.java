@@ -2,15 +2,24 @@ package com.mirea.kornelyuk.galperina.myapp.model;
 
 public class Course {
     int id;
-    String img, title, lvl, date, colour;
+    String img, title, lvl, date, colour, text;
 
-    public Course(int id, String img, String title, String lvl, String date, String colour) {
+    public Course(int id, String img, String title, String lvl, String date, String colour, String text) {
         this.id = id;
         this.img = img;
         this.title = title;
         this.lvl = lvl;
         this.date = date;
         this.colour = colour;
+        this.text = text;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
     }
 
     public int getId() {
