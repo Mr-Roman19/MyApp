@@ -90,33 +90,33 @@
             app:layout_constraintHorizontal_bias="0.489"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/kocher"
-            app:layout_constraintVertical_bias="0.945" />
+            app:layout_constraintVertical_bias="0.995" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
         android:id="@+id/coursePageImage"
-        android:layout_width="260dp"
-        android:layout_height="190dp"
+        android:layout_width="42dp"
+        android:layout_height="7dp"
         android:layout_marginBottom="447dp"
         android:contentDescription="@string/app_name"
         android:scaleType="centerCrop"
         android:transitionName="courseImage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintHorizontal_bias="0.032"
         app:layout_constraintStart_toEndOf="@+id/constraintLayout"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.695"
+        app:layout_constraintVertical_bias="0.275"
         app:srcCompat="@drawable/ic_tramezzino" />
 
     <TextView
         android:id="@+id/coursePageTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="319dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginBottom="612dp"
         android:fontFamily="@font/montserrat_bold"
         android:gravity="center"
         android:text="@string/app_name"
@@ -124,10 +124,8 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
-        app:layout_constraintTop_toBottomOf="@+id/coursePageImage"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/courseBg"
@@ -150,58 +148,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="54dp">
-
-                <TextView
-                    android:layout_width="63dp"
-                    android:layout_height="46dp"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:gravity="center"
-                    android:text="@string/course_start_data"
-                    android:textColor="@color/black"
-                    android:textSize="17sp" />
-
-                <TextView
-                    android:layout_width="81dp"
-                    android:layout_height="38dp"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:text="@string/course_lvl"
-                    android:textColor="@color/black"
-                    android:textSize="17sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/coursePageDate"
-                    android:layout_width="95dp"
-                    android:layout_height="49dp"
-                    android:layout_margin="10dp"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:text="@string/app_name"
-                    android:textColor="@color/black"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/coursePageLvl"
-                    android:layout_width="107dp"
-                    android:layout_height="34dp"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/montserrat_bold"
-
-                    android:text="@string/app_name"
-                    android:textColor="@color/black"
-                    android:textSize="14sp" />
 
             </LinearLayout>
         </LinearLayout>
@@ -209,36 +156,119 @@
 
     <TextView
         android:id="@+id/coursePageText"
-        android:layout_width="311dp"
-        android:layout_height="229dp"
+        android:layout_width="320dp"
+        android:layout_height="479dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="40dp"
-        android:layout_marginBottom="72dp"
+        android:layout_marginBottom="32dp"
         android:fontFamily="@font/montserrat_bold"
         android:text="@string/course_desc"
         android:textColor="@color/black"
-        android:textSize="10dp"
+        android:textSize="11.5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
-        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
-        app:layout_constraintTop_toBottomOf="@+id/courseBg"
-        app:layout_constraintVertical_bias="0.032" />
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout" />
 
     <ImageButton
         android:id="@+id/addToCard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="295dp"
-        android:background="@android:color/transparent"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="15dp"
+        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/constraintLayout"
         app:layout_constraintTop_toBottomOf="@+id/coursePageText"
-        app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
+        app:layout_constraintVertical_bias="0.533"
+        app:srcCompat="@drawable/ic_baseline_favorite_border_24" /><![CDATA[
+
+        android:id="@+id/linearLayout"
+        android:layout_width="328dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/coursePageDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/coursePageTitle">
+
+
+
+
+    ]]>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_margin="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="@string/course_start_data"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/coursePageImage"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="99dp"
+        android:layout_height="34dp"
+        android:layout_margin="10dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/course_lvl"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/coursePageDate"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/coursePageDate"
+        android:layout_width="65dp"
+        android:layout_height="41dp"
+        android:layout_margin="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+
+        android:layout_weight="1"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/coursePageLvl"
+        android:layout_width="179dp"
+        android:layout_height="44dp"
+        android:layout_margin="10dp"
+
+        android:layout_marginStart="10dp"
+
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/coursePageDate"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
