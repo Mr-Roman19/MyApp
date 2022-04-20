@@ -30,7 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="105dp"
                 android:contentDescription="@string/app_name"
-                app:srcCompat="@drawable/ic_sandv" />
+                app:srcCompat="@drawable/ic_tramezzino" />
 
             <TextView
                 android:id="@+id/courseTitle"
@@ -82,7 +82,8 @@
                     android:fontFamily="@font/montserrat_bold"
                     android:text="@string/app_name"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:transitionName="courseImage" />
 
                 <TextView
                     android:id="@+id/courseLvl"
