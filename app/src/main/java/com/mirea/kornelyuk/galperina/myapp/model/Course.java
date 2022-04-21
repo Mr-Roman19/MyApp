@@ -1,10 +1,10 @@
 package com.mirea.kornelyuk.galperina.myapp.model;
 
 public class Course {
-    int id;
+    int id, category;
     String img, title, lvl, date, colour, text;
 
-    public Course(int id, String img, String title, String lvl, String date, String colour, String text) {
+    public Course(int id, String img, String title, String lvl, String date, String colour, String text, int category) {
         this.id = id;
         this.img = img;
         this.title = title;
@@ -12,6 +12,15 @@ public class Course {
         this.date = date;
         this.colour = colour;
         this.text = text;
+        this.category = category;
+    }
+
+    public int getCategory() {
+        return category;
+    }
+
+    public void setCategory(int category) {
+        this.category = category;
     }
 
     public String getText() {

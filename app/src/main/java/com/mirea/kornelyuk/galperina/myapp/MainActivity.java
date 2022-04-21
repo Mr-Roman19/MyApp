@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.mirea.kornelyuk.galperina.myapp.adapter.CategoryAdapter;
 import com.mirea.kornelyuk.galperina.myapp.adapter.CourseAdapter;
@@ -17,7 +19,9 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     RecyclerView categoryRecycler, courseRecycler;
     CategoryAdapter categoryAdapter;
-    CourseAdapter courseAdapter;
+    static CourseAdapter courseAdapter;//что бы было удобно к нему обратиться и что бы сохранил свое первоначальное значение
+    static List<Course> courseList = new ArrayList<>();
+    static List<Course> fullCoursesList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         setCategoryRecycler(categoryList);
 
 
-        List<Course> courseList = new ArrayList<>();
+
         courseList.add(new Course(1, "tramezzino", "Бургеры",  "Новичок", "25 минут","#F0F8C1", "Ингредиенты\n" +
                 "2 фунта говяжьего фарша или 2 (10 унций) упаковки вегетарианского заменителя говяжьего фарша\n" +
                 "2 больших яйца (взбитых)\n" +
@@ -52,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 "\n" +
                 "Чистыми руками сформируйте смесь в 10 пирожков, перенося каждый на подготовленную сковороду для бройлера или противень во время работы.\n" +
                 "\n" +
-                "Жарьте или запекайте в предварительно разогретой духовке около 8 минут с каждой стороны, до готовности. Подавайте сразу на булочках с гамбургерами с вашими любимыми начинками."));
+                "Жарьте или запекайте в предварительно разогретой духовке около 8 минут с каждой стороны, до готовности. Подавайте сразу на булочках с гамбургерами с вашими любимыми начинками.", 1));
         courseList.add(new Course(2, "thank_2", "Курица-ляв\naнги",  "Средний","1,5 часа" ,"#F0F8C1", "Ингредиенты\n" +
                 "1 курица\n" +
                 "150 гр очищенных грецких орехов\n" +
@@ -70,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 "\n" +
                 "Начините курицу и закройте отверстие – можно сделать это зубочистками или просто связав ножки. Если есть время, поставьте начиненную курицу на ночь в холодильник – так она лучше промаринуется.\n" +
                 "\n" +
-                "Выпекайте 50 минут при температуре 190 градусов."));
+                "Выпекайте 50 минут при температуре 190 градусов.", 2));
         courseList.add(new Course(3,"food_meat_gumbo", "Йеменский \nкуриный суп",  "Средний","2,5 часа", "#F0F8C1", "Ингредиенты\n" +
                 "курица\n" +
                 "4–5 среднего размера картофелин\n" +
@@ -82,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 "Приготовление\n" +
                 "Курицу разрезать на порционные куски и залить водой. В воду для супа добавить нарезанную четвертинками луковицу, и варить на медленном огне два часа.\n" +
                 "\n" +
-                "Минут за сорок до окончания варки, положить в кастрюлю разрезанные пополам картофелины и всыпать специи. (За счет куркумы суп моментально приобретет богатый янтарный цвет)."));
+                "Минут за сорок до окончания варки, положить в кастрюлю разрезанные пополам картофелины и всыпать специи. (За счет куркумы суп моментально приобретет богатый янтарный цвет).", 3));
         courseList.add(new Course(4, "food_big_salad", "Салат «Табуле»\n с петрушкой",  "Новичок","25 минут", "#F0F8C1", "Ингредиенты\n" +
                 "200 г кускуса\n" +
                 "300 г помидор\n" +
@@ -94,15 +98,15 @@ public class MainActivity extends AppCompatActivity {
                 "Приготовление\n" + "-----------------------\n" +
                 "Кускус залить кипятком и оставить минут на 20.\n" +
                 "Нарезать помидоры. Порубить зеленый лук и петрушку (без стеблей).\n" +
-                "Смешать петрушку, лук, помидоры и кускус. Заправить салат 4–5 столовыми ложками оливкового масла и выжать сок половины лимона.\n" + " Посолить, поперчить и отправить в холодильник, чтобы салат пропитался.\n" + "Можно добавить дольки лимона как для декора, так и для вкуса." ));
+                "Смешать петрушку, лук, помидоры и кускус. Заправить салат 4–5 столовыми ложками оливкового масла и выжать сок половины лимона.\n" + " Посолить, поперчить и отправить в холодильник, чтобы салат пропитался.\n" + "Можно добавить дольки лимона как для декора, так и для вкуса.",4 ));
         courseList.add(new Course(5, "flambyxvi", "Еврейский \nяблочный пирог",  "Средний", "1,5 часа","#F0F8C1", "Ингредиенты:\n"+" 1/2 Стакана fпельсинового сокa\n"+"4 шт яйца\n"+"2 чайные ложки ванили\n"+
                 "1 чайная ложка порошка для выпечки\n"+"8 штук яблок\n"+"2 чайные ложки корицы\n"+"-----------------------\n" +
                 "Приготовление\n"+
                 " Взбить яйца, смешать с маслом и апельсиновым соком. Добавить муки, 2 стакана сахара и порошок для выпечки.\n"+
                 " Затем добавить ванилин. Почистить и нарезать яблоки небольшими ломтиками. Смешать фрукты с корицей и 1/2 стакана сахара.\n"+
                 " Залить 1/2 теста в смазанную форму для выпечки. Выложить яблочную смесь поверх. Затем нужно накрыть начинку оставшимся тестом.\n"+
-                " Выпекать при температуре 170 около 1 чаcа" ));
-        courseList.add(new Course(6, "mincemeat_pie", "Нежная \nтворожная запеканка", "Средний","1,5 часа", "#F0F8C1", "Ингредиенты\n" +
+                " Выпекать при температуре 170 около 1 чаcа" , 5));
+        courseList.add(new Course(6, "mincemeat_pie", "Нежная \nтворожная \nзапеканка", "Средний","1,5 часа", "#F0F8C1", "Ингредиенты\n" +
                 "750 гр гвина левана \n" +
                 "3 шт яйца\n" +
                 "3 ст. ложки кукурузой муки\n" +
@@ -113,9 +117,29 @@ public class MainActivity extends AppCompatActivity {
                 "Приготовление\n" + "-----------------------\n" +
                 "Все смешать, форму застелить пергаментом, чуть смазать растительным маслом.\n" + "Выпекать в заранее разогретой духовке (160-180), 30-40 минут, в зависимости от духовки.\n" +
                 "\n" +
-                "Готовность проверить сухим ножом или зубочисткой. Они должны остаться сухими." ));
+                "Готовность проверить сухим ножом или зубочисткой. Они должны остаться сухими.", 6 ));
+
+        fullCoursesList.addAll(courseList);
 
         setCourseRecycler(courseList);
+    }
+
+    public void openCard( View view){
+        Intent intent = new Intent(this, OrderPage.class);
+        startActivity(intent);
+
+    }
+
+    public void openKosher( View view){
+        Intent intent = new Intent(this, KosherPage.class);
+        startActivity(intent);
+
+    }
+
+    public void openRestoran( View view){
+        Intent intent = new Intent(this, RestoranPage.class);
+        startActivity(intent);
+
     }
 
     private void setCourseRecycler(List<Course> courseList) {
@@ -135,5 +159,18 @@ public class MainActivity extends AppCompatActivity {
 
         categoryAdapter = new CategoryAdapter(this, categoryList);
         categoryRecycler.setAdapter(categoryAdapter);
+    }
+
+    public static void showCoursesByCategory(int category){
+        courseList.clear();
+        courseList.addAll(fullCoursesList);
+        List<Course> filterCourses = new ArrayList<>();
+        for(Course c:courseList){
+            if(c.getCategory() == category)//проверка на подходящие категории
+                filterCourses.add(c);
+        }
+        courseList.clear();//очистим от лишних
+        courseList.addAll(filterCourses);
+        courseAdapter.notifyDataSetChanged();
     }
 }

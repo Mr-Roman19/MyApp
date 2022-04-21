@@ -1,11 +1,13 @@
 package com.mirea.kornelyuk.galperina.myapp.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.mirea.kornelyuk.galperina.myapp.MainActivity;
 import com.mirea.kornelyuk.galperina.myapp.R;
 import com.mirea.kornelyuk.galperina.myapp.model.Category;
 import androidx.annotation.NonNull;
@@ -33,8 +35,16 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CategoryViewHolder holder, int position) {// что будем подставлять в полч
+    public void onBindViewHolder(@NonNull CategoryViewHolder holder, @SuppressLint("RecyclerView") int position) {// что будем подставлять в полч
         holder.categoryTitle.setText(categories.get(position).getTitle());
+        //нажатие на категории
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MainActivity.showCoursesByCategory(categories.get(position).getId());
+
+            }
+        });
 
     }
 

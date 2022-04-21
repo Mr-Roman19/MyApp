@@ -179,12 +179,13 @@
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="15dp"
         android:background="@android:color/transparent"
+        android:onClick="addToCard"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/constraintLayout"
         app:layout_constraintTop_toBottomOf="@+id/coursePageText"
         app:layout_constraintVertical_bias="0.533"
-        app:srcCompat="@drawable/ic_baseline_favorite_border_24" /><![CDATA[
+        app:srcCompat="@drawable/ic_baseline_star_border_24" /><![CDATA[
 
         android:id="@+id/linearLayout"
         android:layout_width="328dp"
